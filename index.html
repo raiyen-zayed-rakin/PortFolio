@@ -7,13 +7,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-gray-900 text-gray-200">
-    <header class="bg-gray-800 text-white py-3 shadow-lg">
+    <header class="bg-gray-800 text-white py-3 relative shadow-lg">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
             <div class="flex items-center space-x-4 w-full justify-between md:justify-start">
                 <div class="flex items-center space-x-4">
                     <img src="assets/IMG_20240412_145003_279.jpg" height="30" alt="GitHub Profile Image" class="w-16 h-16 rounded-full border-2 border-blue-400 shadow-lg cursor-pointer">
                     <div>
-                        <h1 class="text-[min(5vw,30px)] font-extrabold">Raiyen Zayed Rakin</h1>
+                        <h1 class="text-[min(5vw,30px)] font-extrabold ">Raiyen Zayed Rakin</h1>
                         <p class="text-[min(2.5vw,15px)]  text-gray-400">Software Engineer | Tech Enthusiast</p>
                     </div>
                 </div>
@@ -41,9 +41,9 @@
                             <img src="assets/23-50071-1.png" height="30" alt="GitHub Profile Image" class="h-36 shadow-lg rounded-lg cursor-pointer">
                         </div>
                         <div class="flex flex-col justify-center">
-                        <div class="text-[min(5vw,20px)]">Dhaka, Bangladesh</div>
-                        <div class="text-[min(5vw,20px)]">raiyenzayedrakin@gmail.com</div>
-                        <div class="text-[min(5vw,20px)]">+8801779309553</div>
+                        <div class="text-[min(5vw,15px)]">Dhaka, Bangladesh</div>
+                        <div class="text-[min(5vw,15px)]">raiyenzayedrakin@gmail.com</div>
+                        <div class="text-[min(5vw,15px)]">+8801779309553</div>
                         
                         <div class="flex flex-row mt-4 justify-evenly">
                             <button class="bg-gray-900 py-1 px-8 rounded-lg font-bold hover:text-blue-400 transition duration-300 cursor-pointer">Hire Me</button>
@@ -70,20 +70,74 @@
         </div>
     </header>
     
-    <section id="about" class="max-w-6xl mx-auto py-16 px-6">
-        <h2 class="text-3xl font-bold border-b border-gray-700 pb-2">About Me</h2>
-        <p class="mt-4 text-gray-400">Brief introduction about yourself, your experience, and your interests in software engineering.</p>
-    </section>
+    <section id="about" class="max-w-6xl mx-auto py-12 px-6">
+        <div class="flex flex-col md:flex-row items-center md:justify-between gap-8">
+          <!-- Text Content -->
+          <div class="flex flex-col text-center md:text-left md:flex-1 order-2 md:order-1 space-y-4">
+            <h2 class="text-4xl font-bold border-b border-gray-700 pb-2">Introduction</h2>
+            <p class="text-gray-400 text-base md:text-lg leading-relaxed">
+              Raiyen Zayed Rakin is an undergraduate Computer Science and Engineering student at the Faculty of Science & Technology, American International University-Bangladesh (AIUB), Bangladesh. He has completed his Higher Secondary Certificate (HSC) program at Dhaka Imperial College, Dhaka. His research interests include Deep Learning, machine learning, and AI-driven solutions. Currently working on several research projects under the supervision of his university teachers.
+            </p>
+          </div>
+      
+          <!-- Image -->
+          <div class="flex justify-center md:flex-1 order-1 md:order-2">
+            <img 
+              src="assets/hero_image.jpg" 
+              alt="hero_image" 
+              class="rounded-lg max-sm:h-75 w-full max-w-md md:max-w-full object-cover"
+            >
+          </div>
+          
+        </div>
+      </section>
+      
     
-    <section id="education" class="max-w-6xl mx-auto py-16 px-6">
+    <!-- <section id="education" class="max-w-6xl mx-auto py-16 px-6">
         <h2 class="text-3xl font-bold border-b border-gray-700 pb-2">Educational Background</h2>
         <div class="mt-6 text-gray-400">
             <p><strong>Degree Name</strong> - University Name (Year of Graduation)</p>
             <p>Relevant coursework or achievements</p>
         </div>
     </section>
+     -->
     
-    <section id="projects" class="max-w-6xl mx-auto py-16 px-6">
+    <section id="education" class="max-w-6xl mx-auto py-16 px-6">
+        <h2 class="text-4xl font-bold border-b border-gray-700 pb-4 mb-10 text-center md:text-left">
+            Educational Background
+        </h2>
+    
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-gray-300">
+    
+            <!-- Institution 1 -->
+            <div class="bg-gray-800/30 p-6 rounded-2xl shadow transform hover:-translate-y-2 hover:shadow-xl transition duration-300">
+                <h3 class="text-xl font-semibold mb-1">BSc in Computer Science</h3>
+                <p class="text-sm mb-2 text-gray-400">American International University-Bangladesh (2025)</p>
+                <p class="text-gray-400 text-sm">Focused on Deep Learning, AI, and Software Engineering. Ongoing research
+                    under faculty supervision.</p>
+            </div>
+    
+            <!-- Institution 2 -->
+            <div class="bg-gray-800/30 p-6 rounded-2xl shadow transform hover:-translate-y-2 hover:shadow-xl transition duration-300">
+                <h3 class="text-xl font-semibold mb-1">Higher Secondary Certificate (HSC)</h3>
+                <p class="text-sm mb-2 text-gray-400">Dhaka Imperial College (2020)</p>
+                <p class="text-gray-400 text-sm">Graduated with a strong foundation in Mathematics, Physics, and Computer
+                    Science.</p>
+            </div>
+    
+            <!-- Institution 3 -->
+            <div class="bg-gray-800/30 p-6 rounded-2xl shadow transform hover:-translate-y-2 hover:shadow-xl transition duration-300">
+                <h3 class="text-xl font-semibold mb-1">Secondary School Certificate (SSC)</h3>
+                <p class="text-sm mb-2 text-gray-400">[Your School Name] (2018)</p>
+                <p class="text-gray-400 text-sm">Early exposure to programming and logical problem solving. Academic
+                    excellence in science track.</p>
+            </div>
+    
+        </div>
+    </section>
+
+    
+     <section id="projects" class="max-w-6xl mx-auto py-16 px-6">
         <h2 class="text-3xl font-bold border-b border-gray-700 pb-2">Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <div class="bg-gray-800 p-6 shadow-lg rounded-lg transform hover:-translate-y-2 hover:shadow-xl transition duration-300">
@@ -124,7 +178,7 @@
     </section>
     
     <footer class="bg-gray-800 text-gray-400 text-center py-6 mt-16">
-        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2025 Raiyen Zayed Rakin. All Rights Reserved.</p>
     </footer>
 
     <script>
@@ -140,6 +194,14 @@
             }
             else{
                 this.innerHTML="&#9776;"
+            }
+        });
+
+        // Listen for window resize and hide menu if screen is md or larger
+        window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) {  // 768px is Tailwind's 'md' breakpoint
+            document.getElementById('menu-2').classList.add('hidden');
+            document.getElementById('menu-btn').innerHTML = "&#9776;";
             }
         });
     </script>
