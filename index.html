@@ -82,7 +82,7 @@
         <section id="about" class="max-w-6xl mx-auto py-6 px-6">
             <div class="flex flex-col md:flex-row items-center md:justify-between gap-8">
                 <!-- Text Content -->
-                <div class="flex flex-col text-center md:text-left md:flex-1 order-2 md:order-1 space-y-4">
+                <div class="flex flex-col text-center md:text-left md:flex-1 order-2 md:order-1 space-y-4 animate-fade-in-left">
                     <h2 class="text-4xl font-bold border-b border-gray-700 pb-2">Hi, I'm Rakin</h2>
                     <p class="text-gray-400 text-base md:text-lg leading-relaxed"> 
                         An aspiring computer science and engineering professional with a passion for technology, problem-solving, and continuous learning, seeking to apply my skills in innovative software development and AI-driven solutions. Currently doing my undergrad at the Faculty of Science & Technology, American International University-Bangladesh (AIUB), Bangladesh.
@@ -90,11 +90,15 @@
                 </div>
     
                 <!-- Image -->
-                <div class="flex justify-center md:flex-1 order-1 md:order-2">
-                    <img src="assets/hero_image.jpg" alt="hero_image"
-                        class="rounded-lg max-sm:h-75 w-full max-w-md md:max-w-full object-cover">
+                <div class="flex justify-center md:flex-1 order-1 md:order-2 animate-fade-in-right">
+                    <img src="assets/rakin-ghibli-sticker-r2.png" alt="hero_image"
+                        class=" rounded-lg max-sm:h-75 w-full max-w-md md:max-w-full object-cover">
                 </div>
-    
+                 <!-- Image -->
+                 <!-- <div class="flex justify-center md:flex-1 order-1 md:order-2">
+                    <img src="assets/rakin-ghibli-sticker-resized.png" alt="hero_image"
+                        class="rounded-lg h-35 w-[min(10vw, 100px)] max-w-md md:max-w-full object-cover">
+                </div> -->
             </div>
         </section>
     
@@ -243,8 +247,12 @@
         <section id="skills" class="max-w-6xl mx-auto py-16 px-6">
             
             <h2 class="text-3xl font-bold border-b border-gray-700 pb-2">Skills</h2>
-            <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 md:flex-row gap-2 mt-6">
-                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 hover:font-bold hover:-translate-y-2 transition-all duration-300 ease-in-out">
+
+            <!-- FRONTEND -->
+            <h2 class="text-2xl text-center border-gray-700 py-4 italic">Languages and Tools</h2>
+            
+            <div class="flex flex-wrap gap-2 justify-center">
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
                     <div class="">
                         <img height="16" width="16" alt="HTML"
                             src="https://cdn.simpleicons.org/html5"
@@ -255,61 +263,240 @@
                     </div>
                 </div>
 
-                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 hover:font-bold hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
                     <div class="">
-                        <img height="16" width="16" alt="HTML"
+                        <img height="16" width="16" alt="css"
                             src="https://cdn.simpleicons.org/css"
                             class="">
                     </div>
                     <div class="">
-                        <h3 class="text-[min(5vw,15px)]">css</h3>
+                        <h3 class="text-[min(5vw,15px)]">CSS</h3>
                     </div>
                 </div>
 
-                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 hover:font-bold hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
                     <div class="">
                         <img height="16" width="16" alt="HTML"
                             src="https://cdn.simpleicons.org/javascript"
                             class="">
                     </div>
                     <div class="">
-                        <h3 class="text-[min(5vw,15px)]">HTML</h3>
+                        <h3 class="text-[min(5vw,15px)]">JavaScript</h3>
                     </div>
                 </div>
 
-                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 hover:font-bold hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
                     <div class="">
-                        <img height="16" width="16" alt="HTML"
+                        <img height="16" width="16" alt="tailwindcss"
+                            src="https://cdn.simpleicons.org/tailwindcss"
+                            class="">
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">Tailwind CSS</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <img height="16" width="16" alt="bootstrap"
+                            src="https://cdn.simpleicons.org/bootstrap"
+                            class="">
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">Bootstarp</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <img height="16" width="16" alt="C"
+                            src="https://cdn.simpleicons.org/Cplusplus"
+                            class="">
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">C++</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="flex">
+                        <!-- <img height="16" width="16" alt="csharp"
+                            src="https://cdn.simpleicons.org/c"
+                            class="">
+                        <img height="8" width="8" alt="csharp"
+                            src="https://cdn.simpleicons.org/sharp"
+                            class=""> -->
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">C#</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="flex">
+                        <!-- <img height="8" width="8" alt="java"
+                            src="https://cdn.simpleicons.org/java"
+                            class=""> -->
+                            <i class="fa-brands fa-java" style="color: #ff8000;"></i>
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">Java</h3>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <img height="16" width="16" alt="python"
                             src="https://cdn.simpleicons.org/python"
                             class="">
                     </div>
                     <div class="">
-                        <h3 class="text-[min(5vw,15px)]">python</h3>
+                        <h3 class="text-[min(5vw,15px)]">Python</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <img height="16" width="16" alt="mysql"
+                            src="https://cdn.simpleicons.org/mysql"
+                            class="">
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">MySQL</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <img height="16" width="16" alt="mupyter"
+                            src="https://cdn.simpleicons.org/jupyter"
+                            class="">
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">Jupyter Notebook</h3>
                     </div>
                 </div>
 
                 
-                <!-- <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 px-4 py-1 text-white/80  hover:font-bold lg:text-base hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
                     <div class="">
-                        <img height="16" width="16" alt="HTML"
-                            src="https://cdn.simpleicons.org/html5"
+                        <img height="16" width="16" alt="mongodb"
+                            src="https://cdn.simpleicons.org/mongodb"
                             class="">
                     </div>
                     <div class="">
-                        <div class="text-[min(5vw,15px)]">HTML</div>
+                        <h3 class="text-[min(5vw,15px)]">MongoDB</h3>
                     </div>
-                </div> -->
+                </div>
+
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <img height="16" width="16" alt="expressjs"
+                            src="https://cdn.simpleicons.org/express/white"
+                            class="">
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">ExpressJS</h3>
+                    </div>
+                </div>
                 
-                
-                    
-                <!-- <span
-                    class="text-white py-2 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out max-w-md mx-auto space-y-4">
-                    <img src="https://img.shields.io/badge/CodeChef-%23964B00.svg?style=for-the-badge&logo=CodeChef&logoColor=white" class="h-[min(7vw,35px)] rounded-md hover:shadow-2xl hover:bg-blue-600 transition duration-300" alt="CodeChef" />
-                </span> -->
-                
-                
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <img height="16" width="16" alt="reactjs"
+                            src="https://cdn.simpleicons.org/react"
+                            class="">
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">ReactJS</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <img height="16" width="16" alt="nodejs"
+                            src="https://cdn.simpleicons.org/nodedotjs"
+                            class="">
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">NodeJS</h3>
+                    </div>
+                </div>
+
             </div>
             
+            <!-- BACKEND -->
+            <h2 class="text-2xl text-center border-gray-700 py-4 italic">Software and Design</h2>
+            <!-- <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 md:flex-row gap-2 mt-6">
+                 -->
+            <div class="flex flex-wrap gap-2 justify-center">
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <img height="16" width="16" alt="git"
+                            src="https://cdn.simpleicons.org/git"
+                            class="">
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">Git</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <img height="16" width="16" alt="github"
+                            src="https://cdn.simpleicons.org/github/white"
+                            class="">
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">Github</h3>
+                    </div>
+                </div>
+
+                
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <!-- <img height="16" width="16" alt="HTML"
+                            src="https://cdn.simpleicons.org/vscode"
+                            class=""> -->
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">VS Code</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <!-- <img height="16" width="16" alt="HTML"
+                            src="https://cdn.simpleicons.org/vscode"
+                            class=""> -->
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">PyCharm</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <img height="16" width="16" alt="canva"
+                            src="https://cdn.simpleicons.org/canva"
+                            class="">
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">Canva</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 text-white/80 px-4 py-1 md:hover:font-bold md:hover:-translate-y-[3px] transition-all duration-300 ease-in-out">
+                    <div class="">
+                        <img height="16" width="16" alt="npm"
+                            src="https://cdn.simpleicons.org/npm"
+                            class="">
+                    </div>
+                    <div class="">
+                        <h3 class="text-[min(5vw,15px)]">NPM</h3>
+                    </div>
+                </div>
+            </div>
         </section>
     
         <section id="projects" class="max-w-6xl mx-auto py-16 px-6">
