@@ -80,7 +80,9 @@
             </nav>
         </div>
     </header>
+    
     <main class="pt-[100px]">
+        <!-- Example: fade-in from bottom -->
         <section id="about" class="max-w-6xl mx-auto py-6 px-6">
             <div class="flex flex-col md:flex-row items-center md:justify-between gap-8">
                 <!-- Text Content -->
@@ -105,8 +107,8 @@
         </section>
     
     
-        <section id="education" class="max-w-6xl mx-auto py-16 px-6">
-            <h2 class="text-4xl font-bold border-b border-gray-700  text-center md:text-left pb-4 mb-10">
+        <section id="education" data-animate="bottom" class="max-w-6xl mx-auto py-16 px-6 opacity-0">
+            <h2 data-animate="bottom" class="text-4xl font-bold border-b border-gray-700  text-center md:text-left pb-4 mb-10 opacity-0">
                 Educational Background
             </h2>
     
@@ -115,12 +117,12 @@
                 <!-- University Information -->
                 <!-- <div
                     class="flex flex-col bg-gray-800/50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out max-w-md mx-auto"> -->
-                    <div
-                    class="education-institute-card">
+                    <div data-animate="bottom"
+                    class="education-institute-card opacity-0">
                     <!-- Image Section -->
                     <div class="relative overflow-hidden rounded-xl group cursor-pointer">
                         <img src="assets/aiub.png" alt="AIUB Logo"
-                            class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
+                            class="w-full h-48 object-cover md:transition-transform md:duration-300 md:ease-in-out md:group-hover:scale-105">
     
                         <!-- Top-right icon for small screens -->
                         <a href="https://www.aiub.edu" target="_blank" rel="noopener noreferrer"
@@ -155,12 +157,12 @@
                 </div>
     
                 <!-- college Information -->
-                <div
-                    class="education-institute-card">
+                <div data-animate="bottom"
+                    class="education-institute-card opacity-0">
                     <!-- Image Section -->
                     <div class="relative overflow-hidden rounded-xl group cursor-pointer">
                         <img src="assets/dhaka_imperiel.png" alt="AIUB Logo"
-                            class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
+                            class="w-full h-48 object-cover md:transition-transform md:duration-300 md:ease-in-out md:group-hover:scale-105">
     
                         <!-- Top-right icon for small screens -->
                         <a href="https://imperialcollege.edu.bd/" target="_blank" rel="noopener noreferrer"
@@ -193,12 +195,12 @@
                     </div>
                 </div>
     
-                <div
-                    class="education-institute-card">
+                <div data-animate="bottom"
+                    class="education-institute-card opacity-0">
                     <!-- Image Section -->
                     <div class="relative overflow-hidden rounded-xl group cursor-pointer">
                         <img src="assets/motijheel.png" alt="AIUB Logo"
-                            class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
+                            class="w-full h-48 object-cover md:transition-transform md:duration-300 md:ease-in-out md:group-hover:scale-105">
     
                         <!-- Top-right icon for small screens -->
                         <a href="http://www.mmodel.edu.bd/" target="_blank" rel="noopener noreferrer"
@@ -232,8 +234,8 @@
                 </div>
             </div>
         </section>
-    
-        <section id="experience" class="max-w-6xl mx-auto py-16 px-6">
+        
+        <section id="experience" data-animate="right" class="max-w-6xl mx-auto py-16 px-6 opacity-0">
             <h2 class="text-3xl font-bold border-b border-gray-700 pb-2">Work Experience</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                 <div
@@ -247,11 +249,14 @@
                 </div>
             </div>
         </section>
-    
-        <section id="skills" class="max-w-6xl mx-auto py-16 px-6">
-            
+        <!-- <div
+data-animate
+class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
+>
+<p>This will animate when it enters the viewport</p>
+</div> -->
+        <section id="skills" data-animate="bottom" class="max-w-6xl mx-auto py-16 px-6 opacity-0">
             <h2 class="text-3xl font-bold border-b border-gray-700 pb-2">Skills</h2>
-
             <!-- FRONTEND -->
             <h2 class="text-2xl text-center border-gray-700 py-4 italic">Languages and Tools</h2>
             
@@ -504,18 +509,19 @@
         </section>
     
         <section id="projects" class="max-w-6xl mx-auto py-16 px-6">
-            <h2 class="text-3xl font-bold border-b border-gray-700 pb-4 mb-10">Projects</h2>
+            <h2 data-animate="left" class="text-3xl font-bold border-b border-gray-700 pb-4 mb-10 opacity-0">Projects</h2>
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-gray-300 items-start">
     
                 <!-- project1 -->
                 <!-- <div
                     class="flex flex-col bg-gray-800/50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out max-w-md mx-auto space-y-4"> -->
                     <div
-                    class="project-card">
+                    data-animate="left"
+                    class="project-card opacity-0">
                     <!-- Image Section -->
                     <div class="relative overflow-hidden rounded-xl group cursor-pointer">
                         <img src="assets/aiub-fitness-zone.png" alt="AIUB-FITNESS-ZONE Logo"
-                            class="w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
+                            class="w-full object-cover md:transition-transform md:duration-300 md:ease-in-out md:group-hover:scale-105">
     
                         <!-- Top-right icon for small screens -->
                         <a href="https://github.com/AIUBCodeArchives/AIUB-FITNESS-ZONE" target="_blank" rel="noopener noreferrer"
@@ -551,11 +557,12 @@
     
                 <!-- project2 -->
                 <div
-                    class="project-card">
+                    data-animate="left"
+                    class="project-card opacity-0">
                     <!-- Image Section -->
                     <div class="relative overflow-hidden rounded-xl group cursor-pointer">
                         <img src="assets/studentdash20.png" alt="AIUB-FITNESS-ZONE Logo"
-                            class="w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
+                            class="w-full object-cover md:transition-transform md:duration-300 md:ease-in-out md:group-hover:scale-105">
     
                         <!-- Top-right icon for small screens -->
                         <a href="https://github.com/AIUBCodeArchives/StudentDash-2.0" target="_blank" rel="noopener noreferrer"
@@ -592,11 +599,12 @@
 
                 <!-- project3 -->
                 <div
-                    class="project-card">
+                    data-animate="left"
+                    class="project-card opacity-0">
                     <!-- Image Section -->
                     <div class="relative overflow-hidden rounded-xl group cursor-pointer">
                         <img src="assets/aiub-cgpa-cal.png" alt="AIUB-FITNESS-ZONE Logo"
-                            class="w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
+                            class="w-full object-cover md:transition-transform md:duration-300 md:ease-in-out md:group-hover:scale-105">
     
                         <!-- Top-right icon for small screens -->
                         <a href="https://github.com/raiyen-zayed-rakin/AIUB-CGPA-Calculator" target="_blank" rel="noopener noreferrer"
@@ -717,5 +725,46 @@
             }
         });
     </script>
+
+
+    <!-- animation trigger -->
+    <script>
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+            const direction = entry.target.dataset.animate;
+    
+            // Map direction to class
+            let animationClass = '';
+            switch (direction) {
+                case 'left':
+                animationClass = 'animate-fade-in-left';
+                break;
+                case 'right':
+                animationClass = 'animate-fade-in-right';
+                break;
+                case 'bottom':
+                animationClass = 'animate-fade-in-bottom';
+                break;
+                default:
+                animationClass = 'animate-fade-in-bottom'; // default fallback
+            }
+    
+            // Apply animation class
+            entry.target.classList.remove('opacity-0'); // remove initial hidden state
+            entry.target.classList.add(animationClass);
+            observer.unobserve(entry.target); // Only animate once
+            }
+        });
+        }, {
+        threshold: 0.2,
+        });
+    
+        // Observe all animate targets
+        document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
+    </script>
+  
+      
+  
 </body>
 </html>
