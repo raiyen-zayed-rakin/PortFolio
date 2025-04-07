@@ -20,7 +20,7 @@ style="background: linear-gradient(135deg, #0f172a, #1e293b, #4c1d95, #be185d); 
         
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
             <div class="flex items-center space-x-4 w-full justify-between md:justify-start">
-                <div class="flex items-center space-x-2" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+                <div class="flex items-center space-x-2">
                     
                     <img id="profile-image" src="assets/profile-image.png" height="30" alt="GitHub Profile Image" class="w-14 h-14 rounded-full border-2 border-white-400 object-cover cursor-pointer">
                 
@@ -756,7 +756,7 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
         <p>&copy; 2025 Raiyen Zayed Rakin. All Rights Reserved.</p>
     </footer>
 
-    <!-- <script>
+    <script>
         // Toggle info button
         
         //Toggle info profile image
@@ -780,24 +780,11 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
         }
 
         const profileImage = document.getElementById("profile-image");
+        profileImage.addEventListener('click', function(){
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } )
             // Bind to both elements
         document.getElementById('menu-btn').addEventListener('click', toggleMobileMenu);
-        
-
-        profileImage.addEventListener("click", () => {
-        if (window.innerWidth >= 768) {
-                const link = profileImage.getAttribute("data-link");
-                window.location.href = link;
-            }
-            else {
-                profileImage.addEventListener('click', toggleMobileMenu);
-            }
-        });
-
-        // Add event listener for click
-        profileImage.addEventListener("click", handleProfileClick);
-
-        
         
 
         // Listen for window resize and hide menu if screen is md or larger
@@ -807,7 +794,7 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
             document.getElementById('menu-btn').innerHTML = "&#9776;";
             }
         });
-    </script> -->
+    </script>
 
 
     <!-- animation trigger -->

@@ -18,11 +18,16 @@ module.exports = {
           '0%': { opacity: '0', transform: 'translateY(60px)', filter: 'blur(4px)' },
           '100%': { opacity: '1', transform: 'translateY(0)', filter: 'blur(0)' },
         },
+        'shimmer': {
+          '100%': { transform: 'translateX(100%)' }
+        },
+
       },
       animation: {
         'fade-in-left': 'fade-in-left 2s ease-out forwards',
         'fade-in-right': 'fade-in-right 2s ease-out forwards',
         'fade-in-bottom': 'fade-in-bottom 1s ease-out forwards',
+        'shimmer': 'shimmer 1.5s infinite linear',
       },
       colors: {
         "orange": "#fe5e48"
