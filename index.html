@@ -12,12 +12,12 @@
 </head>
 <body class="bg-gray-900 text-gray-200">
 
-    <header class="fixed top-0 left-0 w-full z-50 bg-gray-800/60 text-white py-2 shadow-lg backdrop-filter backdrop-blur-md">
+    <header class="fixed top-0 left-0 w-full z-50 bg-gray-800/60 text-white py-2 shadow-lg backdrop-filter backdrop-blur-sm">
         
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
             <div class="flex items-center space-x-4 w-full justify-between md:justify-start">
                 <div class="flex items-center space-x-4 ">
-                    <img id="profile-image" src="assets/IMG_20240412_145003_279.jpg" height="30" alt="GitHub Profile Image" class="w-16 h-16 rounded-full border-2 border-blue-400 shadow-lg cursor-pointer md:opacity-70" data-link="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <img id="profile-image" src="assets/profile-image.png" height="30" alt="GitHub Profile Image" class="w-16 h-16 rounded-full border-2 border-white-400 object-cover cursor-pointer" >
                     <div>
                         <h1 class="text-[min(5vw,30px)] font-extrabold md:text-[min(4vw,20px)] lg:text-[min(5vw,30px)]">Raiyen Zayed Rakin</h1>
                         <p class="text-[min(2.5vw,15px)]  text-gray-400">Software Engineer | Tech Enthusiast</p>
@@ -115,10 +115,9 @@
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-gray-300 items-start">
     
                 <!-- University Information -->
-                <!-- <div
-                    class="flex flex-col bg-gray-800/50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out max-w-md mx-auto"> -->
-                    <div data-animate="bottom"
-                    class="education-institute-card opacity-0">
+                
+                <div data-animate="bottom"
+                    class="opacity-0 education-institute-card">
                     <!-- Image Section -->
                     <div class="relative overflow-hidden rounded-xl group cursor-pointer">
                         <img src="assets/aiub.png" alt="AIUB Logo"
@@ -139,7 +138,7 @@
                             </div>
                         </a>
                     </div>
-    
+                    
                     <!-- Content Section -->
                     <div class="space-y-2">
                         <h3 class="text-xl font-bold text-white leading-tight">
