@@ -24,6 +24,9 @@ module.exports = {
         'fade-in-right': 'fade-in-right 2s ease-out forwards',
         'fade-in-bottom': 'fade-in-bottom 1s ease-out forwards',
       },
+      colors: {
+        "orange": "#fe5e48"
+      }
     },
   },
   plugins: [],
