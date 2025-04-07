@@ -10,16 +10,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-gray-900 text-gray-200">
+<!-- 
+galaxy gradient
+style="background: linear-gradient(135deg, #0f172a, #1e293b, #4c1d95, #be185d); -->
+<body 
+ class="bg-gray-900 text-gray-200">
 
     <header class="fixed top-0 left-0 w-full z-50 bg-gray-800/60 text-white py-2 shadow-lg backdrop-filter backdrop-blur-sm">
         
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
             <div class="flex items-center space-x-4 w-full justify-between md:justify-start">
-                <div class="flex items-center space-x-4 ">
-                    <img id="profile-image" src="assets/profile-image.png" height="30" alt="GitHub Profile Image" class="w-16 h-16 rounded-full border-2 border-white-400 object-cover cursor-pointer" >
+                <div class="flex items-center space-x-2 ">
+                    <img id="profile-image" src="assets/profile-image.png" height="30" alt="GitHub Profile Image" class="w-14 h-14 rounded-full border-2 border-white-400 object-cover cursor-pointer" >
                     <div>
-                        <h1 class="text-[min(5vw,30px)] font-extrabold md:text-[min(4vw,20px)] lg:text-[min(5vw,30px)]">Raiyen Zayed Rakin</h1>
+                        <h1 class="text-[min(5vw,30px)] font-extrabold md:text-[min(4vw,20px)] lg:text-[min(5vw,25px)]">Raiyen Zayed Rakin</h1>
                         <p class="text-[min(2.5vw,15px)]  text-gray-400">Software Engineer | Tech Enthusiast</p>
                     </div>
                 </div>
@@ -29,17 +33,18 @@
             
             <!-- main navbar -->
             <nav id="menu" class="hidden md:block mt-4 md:mt-0 w-full md:w-auto">
-                <ul class="flex flex-col text-center text-md p-0 space-x-0 md:flex-row md:space-x-6 bg-gray-800 md:bg-transparent md:p-0 md:flex">
-                    <li><a href="#about" class="font-bold hover:text-blue-400 transition duration-300">About</a></li>
-                    <li><a href="#education" class="font-bold hover:text-blue-400 transition duration-300">Education</a></li>
-                    <li><a href="#experience" class="font-bold hover:text-blue-400 transition duration-300">Experience</a></li>
-                    <li><a href="#skills" class="font-bold hover:text-blue-400 transition duration-300">Skills</a></li>
-                    <li><a href="#projects" class="font-bold hover:text-blue-400 transition duration-300">Projects</a></li>
-                    <!-- <li><a href="#research" class="font-bold hover:text-blue-400 transition duration-300">Research</a></li> -->
-                    <li><a href="#contact" class="font-bold hover:text-blue-400 transition duration-300">Contact</a></li>
+                <ul class="flex flex-col text-center h-full text-md p-0 space-x-0 md:flex-row md:space-x-6 backdrop-filter backdrop-blur-sm md:bg-transparent md:p-0 md:flex">
+                    <li><a href="#about" class="max-sm:text-2xl font-bold hover:text-blue-400 transition duration-300" onclick="toggleMobileMenu()">About</a></li>
+                    <li><a href="#education" class="max-sm:text-2xl  font-bold hover:text-blue-400 transition duration-300" onclick="toggleMobileMenu()">Education</a></li>
+                    <li><a href="#experience" class="max-sm:text-2xl  font-bold hover:text-blue-400 transition duration-300" onclick="toggleMobileMenu()">Experience</a></li>
+                    <li><a href="#skills" class="max-sm:text-2xl  font-bold hover:text-blue-400 transition duration-300" onclick="toggleMobileMenu()">Skills</a></li>
+                    <li><a href="#projects" class="max-sm:text-2xl  font-bold hover:text-blue-400 transition duration-300" onclick="toggleMobileMenu()">Projects</a></li>
+                    <!-- <li><a href="#research" class="max-sm:text-2xl  font-bold hover:text-blue-400 transition duration-300" onclick="toggleMobileMenu()">Research</a></li> -->
+                    <li><a href="#contact" class="max-sm:text-2xl  font-bold hover:text-blue-400 transition duration-300" onclick="toggleMobileMenu()">Contact</a></li>
                     <!-- <li>
                         <button id="menu-bt2" class=" text-white  text-3xl rounded-md focus:outline-none cursor-pointer">&#9776;</button>
                     </li> -->
+                    
                 </ul>
             </nav>
 
@@ -87,7 +92,7 @@
             <div class="flex flex-col md:flex-row items-center md:justify-between gap-8">
                 <!-- Text Content -->
                 <div class="flex flex-col text-center md:text-left md:flex-1 order-2 md:order-1 space-y-4 animate-fade-in-left">
-                    <h2 class="text-4xl font-bold border-b border-gray-700 pb-2">Hi, I'm Rakin</h2>
+                    <h2 class="text-4xl font-bold border-b text-[#fe5e48] border-gray-700 pb-2">Hi, I'm Rakin</h2>
                     <p class="text-gray-400 text-base md:text-lg leading-relaxed"> 
                         An aspiring computer science and engineering professional with a passion for technology, problem-solving, and continuous learning, seeking to apply my skills in innovative software development and AI-driven solutions. Currently doing my undergrad at the Faculty of Science & Technology, American International University-Bangladesh (AIUB), Bangladesh.
                     </p>
@@ -113,7 +118,7 @@
             </h2>
     
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-gray-300 items-start">
-    
+                
                 <!-- University Information -->
                 
                 <div data-animate="bottom"
@@ -259,7 +264,7 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
             <!-- FRONTEND -->
             <h2 class="text-2xl text-center border-gray-700 py-4 italic">Languages and Tools</h2>
             
-            <div class="flex flex-wrap gap-2 justify-center">
+            <div class="flex flex-wrap gap-2 justify-center md:px-30">
                 <div class="skills-badge">
                     <div class="">
                         <img height="16" width="16" alt="HTML"
@@ -524,7 +529,7 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
     
                         <!-- Top-right icon for small screens -->
                         <a href="https://github.com/AIUBCodeArchives/AIUB-FITNESS-ZONE" target="_blank" rel="noopener noreferrer"
-                            class="absolute top-2 right-2 sm:flex bg-black/60 hover:bg-black/80 text-white text-xs px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 right-2 sm:flex md:hidden bg-black/60 hover:bg-black/80 text-white text-xs px-2 py-1 rounded-full shadow">
                             <i class="fa-brands fa-github fa-2x hover:text-gray-400"></i>
                         </a>
     
@@ -643,31 +648,79 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
         </section>
     
         <section id="research" class="max-w-6xl mx-auto py-16 px-6">
-            <h2 class="text-3xl font-bold border-b border-gray-700 pb-2">Research</h2>
+            <h2 data-animate="bottom" class="opacity-0 text-3xl font-bold border-b border-gray-700 pb-2">Research</h2>
             <div class="grid grid-cols-1 gap-6 mt-6">
-                <div
-                    class="bg-gray-800 p-6 shadow-lg rounded-lg transform hover:-translate-y-2 hover:shadow-xl transition duration-300">
-                    <h3 class="text-xl font-semibold text-white">Research Paper Title</h3>
-                    <p class="mt-2 text-gray-400">Brief description of the research.</p>
+                <div data-animate="bottom"
+                    class="opacity-0 bg-gray-800 p-6 shadow-lg rounded-lg transform md:hover:-translate-y-2 hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl md:text-2xl font-semibold text-white">Towards Safer Cities: AI-Powered Infrastructure Fault Detection Using YOLOv11. (Ongoing)</h3>
+                    <p class="mt-2 text-gray-400 text-justify">Timely detection of infrastructure failures requires an effective solution. A YOLOv11-based deep learning model has been proposed which analyzes infrastruc-ture and detects faults in civil architecture. The focus of this study is on an im-age-based approach to infrastructure assessment, which is an alternative to manual visual inspections. Despite not explicitly modeling infrastructure deterioration, the proposed method is designed to automate defect identification based on visual cues.</p>
                     <a href="#" class="text-blue-400 hover:underline mt-3 inline-block">Read More</a>
                 </div>
+                <div data-animate="bottom"
+                    class="opacity-0 bg-gray-800 p-6 shadow-lg rounded-lg transform md:hover:-translate-y-2 hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl md:text-2xl font-semibold text-white">Combination of Bangla and English Sign Language Detection Model Using YOLOv11. (Ongoing)</h3>
+                    <p class="mt-2 text-gray-400 text-justify">The purpose of this research is to create a detection system that incorporates Bangla and English sign languages to enhance the flow of communication for those who use these forms of sign language. The research approach uses a YOLOv11 object detection architecture that has been trained and can recognize both BdSL (Bangla Sign Language) and ASL (American Sign Language) alphabets concurrently in real-time.</p>
+                    <a href="#" class="text-blue-400 hover:underline mt-3 inline-block">Read More</a>
+                </div>
+                
             </div>
         </section>
     
     
     
         <section id="contact" class="max-w-6xl mx-auto py-16 px-6">
-            <h2 class="text-3xl font-bold border-b border-gray-700 pb-2">Contact</h2>
-            <div class="mt-6 text-gray-400">
-                <p>Email: <a href="mailto:your.email@example.com"
-                        class="hover:text-blue-400 transition duration-300">your.email@example.com</a></p>
-                <p>LinkedIn: <a href="#"
-                        class="text-blue-400 hover:underline hover:text-blue-500 transition duration-300">linkedin.com/in/yourprofile</a>
-                </p>
-                <p>GitHub: <a href="#"
-                        class="text-blue-400 hover:underline hover:text-blue-500 transition duration-300">github.com/yourusername</a>
-                </p>
-            </div>
+            <h2 data-animate="bottom" class="text-left opacity-0 text-3xl font-bold border-b border-gray-700 pb-2">Contact Me</h2>
+                <div class="w-full max-w-2xl bg-gray-800 rounded-2xl shadow-2xl p-8 mt-6  md:p-12 text-white">
+                  
+                  <form action="#" method="POST" class="space-y-6">
+                    <div>
+                      <label for="name" class="block text-gray-300 font-medium mb-2">Name</label>
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        required
+                        placeholder="Your name"
+                        class="w-full px-4 py-3 rounded-xl bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                      />
+                    </div>
+              
+                    <div>
+                      <label for="email" class="block text-gray-300 font-medium mb-2">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        placeholder="you@example.com"
+                        class="w-full px-4 py-3 rounded-xl bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                      />
+                    </div>
+              
+                    <div>
+                      <label for="message" class="block text-gray-300 font-medium mb-2">Message</label>
+                      <textarea
+                        name="message"
+                        id="message"
+                        rows="5"
+                        required
+                        placeholder="What's on your mind?"
+                        class="w-full px-4 py-3 rounded-xl bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                      ></textarea>
+                    </div>
+              
+                    <!-- 🌌 Dark Button -->
+                    <button
+                      type="submit"
+                      class="w-full flex items-center justify-center gap-2 bg-sky-600 text-white font-semibold py-3 rounded-xl hover:bg-sky-500 transition duration-300 shadow-md hover:shadow-lg"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 14h.01M16 10h.01M9 16h6m2 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Send Message
+                    </button>
+                  </form>
+                </div>
         </section>
     </main>
     <footer class="bg-gray-800 text-gray-400 text-center py-6 mt-16">
@@ -678,22 +731,24 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
         // Toggle info button
         
         //Toggle info profile image
-        function toggleMobileMenu() {
-                const menu = document.getElementById('menu-2');
-                const menuBtn = document.getElementById('menu-btn');
-                const isHidden = menu.classList.contains('hidden');
+        function toggleMobileMenu() 
+        {
+            const menu = document.getElementById('menu');
+            const menuBtn = document.getElementById('menu-btn');
+            const isHidden = menu.classList.contains('hidden');
 
-                // Toggle menu visibility
-                menu.classList.toggle('hidden');
+            menuBtn.innerHTML = "&#9776;"
+            // Toggle menu visibility
+            menu.classList.toggle('hidden');
 
-                // Change icon
-                if(isHidden){
-                    this.innerHTML="&#9747;"
-                }
-                else {
-                    this.innerHTML = "&#9776;"
-                }
+            // Change icon
+            if(isHidden){
+                this.innerHTML="&#9747;"
             }
+            else {
+                this.innerHTML = "&#9776;"
+            }
+        }
 
         const profileImage = document.getElementById("profile-image");
             // Bind to both elements
