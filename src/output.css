@@ -1642,6 +1642,26 @@ video {
     padding: 3rem;
   }
 
+  .md\:p-8 {
+    padding: 2rem;
+  }
+
+  .md\:p-6 {
+    padding: 1.5rem;
+  }
+
+  .md\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .md\:pl-12 {
+    padding-left: 3rem;
+  }
+
+  .md\:pl-16 {
+    padding-left: 4rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
