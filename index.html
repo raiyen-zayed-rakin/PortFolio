@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raiyen Zayed Rakin</title>
-    <link rel="icon" type="icon" href="/assets/favicon.ico">  
     <link rel="stylesheet" href="src/input.css">  
     <link rel="stylesheet" href="src/output.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="icon" type="icon" href="/assets/favicon.ico">  
 </head>
 <!-- 
 galaxy gradient
 style="background: linear-gradient(135deg, #0f172a, #1e293b, #4c1d95, #be185d); -->
 <body 
  class="bg-gray-900 text-gray-200 scroll-smooth">
+    
+    <!-- Loading screen -->
+    <div id="loading-screen" class="flex flex-col fixed inset-0 bg-gray-900 items-center justify-center z-50 animate-pulse transition-opacity duration-700">
+        <img src="assets/profile-image.png" alt="Loading..." class="w-16 h-16 rounded-full" />
+        <h3 class="text-xl font-bold">Raiyen Zayed Rakin</h3>
+    </div>
+
+    <div id="main-content" class="hidden">
 
     <header class="fixed top-0 left-0 w-full z-50 bg-gray-800/60 text-white py-2 shadow-lg backdrop-filter backdrop-blur-sm">
         
@@ -644,15 +653,15 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
             <h2 data-animate="bottom" class="opacity-0 text-3xl font-bold border-b border-gray-700 pb-2">Research</h2>
             <div class="grid grid-cols-1 gap-6 mt-6">
                 <div data-animate="bottom"
-                    class="opacity-0 bg-gray-800 p-6 shadow-lg rounded-lg transform md:hover:-translate-y-2 hover:shadow-xl transition duration-300">
-                    <h3 class="text-xl md:text-2xl font-semibold text-white">Towards Safer Cities: AI-Powered Infrastructure Fault Detection Using YOLOv11. (Ongoing)</h3>
-                    <p class="mt-2 text-gray-400 text-justify">Timely detection of infrastructure failures requires an effective solution. A YOLOv11-based deep learning model has been proposed which analyzes infrastruc-ture and detects faults in civil architecture. The focus of this study is on an im-age-based approach to infrastructure assessment, which is an alternative to manual visual inspections. Despite not explicitly modeling infrastructure deterioration, the proposed method is designed to automate defect identification based on visual cues.</p>
+                    class="opacity-0 bg-gray-800 p-6 shadow-lg rounded-lg transform md:hover:-translate-y-2 hover:shadow-xl transition duration-300 filter blur-lg">
+                    <h3 class="text-xl md:text-2xl font-semibold text-white filter blur-lg">Towards Safer Cities: AI-Powered Infrastructure Fault Detection Using YOLOv11.</h3> <span class="text-xl md:text-2xl font-semibold">(Ongoing)</span> 
+                    <p class="mt-2 text-gray-400 text-justify filter blur-lg">Timely detection of infrastructure failures requires an effective solution. A YOLOv11-based deep learning model has been proposed which analyzes infrastruc-ture and detects faults in civil architecture. The focus of this study is on an im-age-based approach to infrastructure assessment, which is an alternative to manual visual inspections. Despite not explicitly modeling infrastructure deterioration, the proposed method is designed to automate defect identification based on visual cues.</p>
                     <a href="#" class="text-blue-400 hover:underline mt-3 inline-block">Read More</a>
                 </div>
                 <div data-animate="bottom"
                     class="opacity-0 bg-gray-800 p-6 shadow-lg rounded-lg transform md:hover:-translate-y-2 hover:shadow-xl transition duration-300">
-                    <h3 class="text-xl md:text-2xl font-semibold text-white">Combination of Bangla and English Sign Language Detection Model Using YOLOv11. (Ongoing)</h3>
-                    <p class="mt-2 text-gray-400 text-justify">The purpose of this research is to create a detection system that incorporates Bangla and English sign languages to enhance the flow of communication for those who use these forms of sign language. The research approach uses a YOLOv11 object detection architecture that has been trained and can recognize both BdSL (Bangla Sign Language) and ASL (American Sign Language) alphabets concurrently in real-time.</p>
+                    <h3 class="text-xl md:text-2xl font-semibold text-white filter blur-lg">Combination of Bangla and English Sign Language Detection Model Using YOLOv11.</h3><span class="text-xl md:text-2xl font-semibold">(Ongoing)</span>
+                    <p class="mt-2 text-gray-400 text-justify filter blur-lg">The purpose of this research is to create a detection system that incorporates Bangla and English sign languages to enhance the flow of communication for those who use these forms of sign language. The research approach uses a YOLOv11 object detection architecture that has been trained and can recognize both BdSL (Bangla Sign Language) and ASL (American Sign Language) alphabets concurrently in real-time.</p>
                     <a href="#" class="text-blue-400 hover:underline mt-3 inline-block">Read More</a>
                 </div>
                 
@@ -746,7 +755,7 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
     <footer class="bg-gray-800 text-gray-400 text-center py-6 mt-16">
         <p>&copy; 2025 Raiyen Zayed Rakin. All Rights Reserved.</p>
     </footer>
-
+    </div>
     <script>
         // Toggle info button
         
@@ -824,7 +833,33 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
         // Observe all animate targets
         document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
     </script>
-  
+    <!-- Loading screen -->
+    <script>
+        window.addEventListener('load', () => {
+          const loader = document.getElementById('loading-screen');
+          const content = document.getElementById('main-content');
+      
+          // Force minimum loading time (in milliseconds)
+          const minimumLoadTime = 4000; // 2 seconds
+      
+          const startTime = performance.now();
+      
+          const hideLoader = () => {
+            const elapsedTime = performance.now() - startTime;
+            const remainingTime = minimumLoadTime - elapsedTime;
+      
+            setTimeout(() => {
+              loader.classList.add('opacity-0');
+              setTimeout(() => {
+                loader.classList.add('hidden');
+                content.classList.remove('hidden');
+              }, 700); // match with fade-out transition
+            }, remainingTime > 0 ? remainingTime : 0);
+          };
+      
+          hideLoader();
+        });
+    </script>
       
   
 </body>

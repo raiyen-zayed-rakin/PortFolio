@@ -21,6 +21,10 @@ module.exports = {
         'shimmer': {
           '100%': { transform: 'translateX(100%)' }
         },
+        'slow-spin': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
 
       },
       animation: {
@@ -28,6 +32,7 @@ module.exports = {
         'fade-in-right': 'fade-in-right 2s ease-out forwards',
         'fade-in-bottom': 'fade-in-bottom 1s ease-out forwards',
         'shimmer': 'shimmer 1.5s infinite linear',
+        'slow-spin': 'slow-spin 4s linear infinite',
       },
       colors: {
         "orange": "#fe5e48"
