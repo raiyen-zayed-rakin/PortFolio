@@ -756,8 +756,9 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
         <p>&copy; 2025 Raiyen Zayed Rakin. All Rights Reserved.</p>
     </footer>
     </div>
+
+
     <script>
-        // Toggle info button
         
         //Toggle info profile image
         function toggleMobileMenu() 
@@ -794,11 +795,9 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
             document.getElementById('menu-btn').innerHTML = "&#9776;";
             }
         });
-    </script>
 
-
-    <!-- animation trigger -->
-    <script>
+        
+        // animation trigger
         const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -832,35 +831,54 @@ class="opacity-0 translate-y-10 blur-md transition-all duration-1000"
     
         // Observe all animate targets
         document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
-    </script>
-    <!-- Loading screen -->
-    <script>
+
+
+        // // Loading screen
+        // window.addEventListener('load', () => {
+        //   const loader = document.getElementById('loading-screen');
+        //   const content = document.getElementById('main-content');
+      
+        //   // Force minimum loading time (in milliseconds)
+        //   const minimumLoadTime = 2000; // 2 seconds
+      
+        //   const startTime = performance.now();
+      
+        //   const hideLoader = () => {
+        //     const elapsedTime = performance.now() - startTime;
+        //     const remainingTime = minimumLoadTime - elapsedTime;
+      
+        //     setTimeout(() => {
+        //       loader.classList.add('opacity-0');
+        //       setTimeout(() => {
+        //         loader.classList.add('hidden');
+        //         content.classList.remove('hidden');
+        //       }, 700); // match with fade-out transition
+        //     }, remainingTime > 0 ? remainingTime : 0);
+        //   };
+      
+        //   hideLoader();
+        // });
+
+        const startTime = performance.now();
+
         window.addEventListener('load', () => {
-          const loader = document.getElementById('loading-screen');
-          const content = document.getElementById('main-content');
-      
-          // Force minimum loading time (in milliseconds)
-          const minimumLoadTime = 2000; // 2 seconds
-      
-          const startTime = performance.now();
-      
-          const hideLoader = () => {
+            const loader = document.getElementById('loading-screen');
+            const content = document.getElementById('main-content');
+
+            const minimumLoadTime = 2000; // 2 seconds
             const elapsedTime = performance.now() - startTime;
             const remainingTime = minimumLoadTime - elapsedTime;
-      
+
             setTimeout(() => {
-              loader.classList.add('opacity-0');
-              setTimeout(() => {
+            loader.classList.add('opacity-0');
+            setTimeout(() => {
                 loader.classList.add('hidden');
                 content.classList.remove('hidden');
-              }, 700); // match with fade-out transition
+            }, 700); // fade-out time
             }, remainingTime > 0 ? remainingTime : 0);
-          };
-      
-          hideLoader();
         });
     </script>
-      
-  
+
+
 </body>
 </html>
