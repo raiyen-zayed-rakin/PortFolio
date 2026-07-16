@@ -28,19 +28,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-        {/* Left — Profile + copyright */}
-        <div className="flex items-center gap-3">
-          <img
-            src={identity.profileImage}
-            alt="Rakin"
-            className="w-8 h-8 rounded-full border border-[var(--nt-sakura)] object-cover"
-          />
-          <div className="text-sm text-[var(--nt-text-muted)]">
-            <span className="text-[var(--nt-text)] font-semibold">{identity.fullName}</span>
-            {" "}&bull;{" "}
-            <span>© {new Date().getFullYear()} All Rights Reserved</span>
-          </div>
-        </div>
+
 
         {/* Center — Social Icons */}
         <div className="flex items-center gap-4">
@@ -76,9 +64,9 @@ export default function Footer() {
         </motion.button>
       </div>
 
-      {/* Bottom tagline */}
-      <div className="text-center pb-4 text-xs text-[var(--nt-text-muted)] opacity-50">
-        Built with React · Vite · TypeScript · Tailwind CSS v4
+      {/* Copyright */}
+      <div className="text-center pb-4 text-xs text-[var(--nt-text-muted)] opacity-60">
+        © {new Date().getFullYear()} All Rights Reserved
       </div>
     </footer>
   );

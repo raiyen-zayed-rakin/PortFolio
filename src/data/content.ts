@@ -55,27 +55,19 @@ export const skills: { name: string; rank: Rank; value: number; category: string
   { name: "HTML / CSS", rank: "S", value: 93, category: "Languages" },
   { name: "SQL", rank: "A", value: 80, category: "Languages" },
   { name: "C++", rank: "B", value: 75, category: "Languages" },
-  { name: "Java", rank: "B", value: 72, category: "Languages" },
   // Frontend
   { name: "React", rank: "S", value: 90, category: "Frontend" },
+  { name: "Next.js", rank: "A", value: 85, category: "Frontend" },
   { name: "Tailwind CSS", rank: "S", value: 92, category: "Frontend" },
-  { name: "shadcn/ui", rank: "A", value: 82, category: "Frontend" },
-  { name: "Vite", rank: "A", value: 85, category: "Frontend" },
-  { name: "Framer Motion", rank: "B", value: 70, category: "Frontend" },
   // Backend
   { name: "FastAPI", rank: "A", value: 80, category: "Backend" },
   { name: "Node.js", rank: "A", value: 78, category: "Backend" },
   { name: "MongoDB", rank: "A", value: 80, category: "Backend" },
-  { name: "MySQL", rank: "A", value: 78, category: "Backend" },
   // AI/ML
   { name: "PyTorch", rank: "B", value: 70, category: "AI/ML" },
   { name: "OpenCV", rank: "B", value: 72, category: "AI/ML" },
-  { name: "Gemini API", rank: "A", value: 78, category: "AI/ML" },
   // Tools
   { name: "Git / GitHub", rank: "S", value: 90, category: "Tools" },
-  { name: "Vercel", rank: "A", value: 88, category: "Tools" },
-  { name: "GitHub Actions", rank: "B", value: 70, category: "Tools" },
-  { name: "Figma", rank: "B", value: 68, category: "Tools" },
 ];
 
 /* -------------------------------- PROJECTS ------------------------------- */
@@ -89,70 +81,70 @@ export const projects: {
   repoLink?: string;
   preview: string | null;
 }[] = [
-  {
-    title: "RecruitBD-AI",
-    label: "AI-Powered Platform",
-    difficulty: "S",
-    blurb:
-      "AI-powered CV parsing and job matching platform. FastAPI backend with Gemini API integration extracts structured data from CVs (PDF/DOCX) and matches candidates using SentenceTransformers.",
-    tech: ["React", "Vite", "Tailwind CSS", "shadcn/ui", "FastAPI", "Gemini API", "SentenceTransformers"],
-    link: "https://recruit-bd-ai.vercel.app/",
-    repoLink: "https://github.com/raiyen-zayed-rakin/RecruitBD-AI",
-    preview: null,
-  },
-  {
-    title: "Ledger-AI",
-    label: "Business Intelligence",
-    difficulty: "S",
-    blurb:
-      "AI-powered business intelligence dashboard for SME owners. Next.js + Groq LLaMA for sentiment tagging and report generation, with a multi-agent AI CFO orchestrator producing strategic recommendations.",
-    tech: ["React 18", "TypeScript", "Tailwind CSS", "Next.js", "Groq LLaMA", "Supabase Auth"],
-    link: "https://ledgerai.mrudoy.me/",
-    repoLink: "https://github.com/raiyen-zayed-rakin/Ledger-Ai",
-    preview: null,
-  },
-  {
-    title: "Pathfinder 24/7",
-    label: "Client Landing Page",
-    difficulty: "A",
-    blurb:
-      "Premium landing page for a Bangladesh-based travel and immigration consultancy. Showcasing visa processing, work permits, student visas, and immigration consulting services.",
-    tech: ["React", "Vite", "Tailwind CSS", "shadcn/ui"],
-    link: "https://pathfinder24seven.vercel.app/",
-    preview: null,
-  },
-  {
-    title: "AIUB CGPA Calculator",
-    label: "Web Tool",
-    difficulty: "B",
-    blurb:
-      "Responsive web-based CGPA calculator for AIUB students. Input grades (A+ to F) and credit counts to calculate cumulative GPA — slick, mobile-friendly design.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    link: "https://aiub-cgpa-calculator.vercel.app/",
-    repoLink: "https://github.com/raiyen-zayed-rakin/AIUB-CGPA-Calculator",
-    preview: "/assets/aiub-cgpa-cal.png",
-  },
-  {
-    title: "AIUB Fitness Zone",
-    label: "Desktop App",
-    difficulty: "B",
-    blurb:
-      "Comprehensive fitness management platform for AIUB students and faculty with workout plans, health resources, and challenges to promote physical well-being.",
-    tech: ["Java", "Swing GUI"],
-    repoLink: "https://github.com/AIUBCodeArchives/AIUB-FITNESS-ZONE",
-    preview: "/assets/aiub-fitness-zone.png",
-  },
-  {
-    title: "StudentDash 2.0",
-    label: "Desktop App",
-    difficulty: "B",
-    blurb:
-      "Ride-sharing application for the student community offering affordable, safe transportation options with real-time tracking and effortless management.",
-    tech: ["C#", "WinForms", "SQL"],
-    repoLink: "https://github.com/AIUBCodeArchives/StudentDash-2.0",
-    preview: "/assets/studentdash20.png",
-  },
-];
+    {
+      title: "RecruitBD-AI",
+      label: "AI-Powered Platform",
+      difficulty: "S",
+      blurb:
+        "AI-powered CV parsing and job matching platform. FastAPI backend with Gemini API integration extracts structured data from CVs (PDF/DOCX) and matches candidates using SentenceTransformers.",
+      tech: ["React", "Vite", "Tailwind CSS", "shadcn/ui", "FastAPI", "Gemini API", "SentenceTransformers"],
+      link: "https://recruit-bd-ai.vercel.app/",
+      repoLink: "https://github.com/raiyen-zayed-rakin/RecruitBD-AI",
+      preview: "/assets/recruitbd.png",
+    },
+    {
+      title: "Ledger-AI",
+      label: "Business Intelligence",
+      difficulty: "S",
+      blurb:
+        "AI-powered business intelligence dashboard for SME owners. Next.js + Groq LLaMA for sentiment tagging and report generation, with a multi-agent AI CFO orchestrator producing strategic recommendations.",
+      tech: ["React 18", "TypeScript", "Tailwind CSS", "Next.js", "Groq LLaMA", "Supabase Auth"],
+      link: "https://ledgerai.mrudoy.me/",
+      repoLink: "https://github.com/raiyen-zayed-rakin/Ledger-Ai",
+      preview: "/assets/ledger.png",
+    },
+    {
+      title: "Pathfinder 24/7",
+      label: "Client Landing Page",
+      difficulty: "A",
+      blurb:
+        "Premium landing page for a Bangladesh-based travel and immigration consultancy. Showcasing visa processing, work permits, student visas, and immigration consulting services.",
+      tech: ["React", "Vite", "Tailwind CSS", "shadcn/ui"],
+      link: "https://pathfinder24seven.vercel.app/",
+      preview: "/assets/pathfinder.png",
+    },
+    {
+      title: "AIUB CGPA Calculator",
+      label: "Web Tool",
+      difficulty: "B",
+      blurb:
+        "Responsive web-based CGPA calculator for AIUB students. Input grades (A+ to F) and credit counts to calculate cumulative GPA — slick, mobile-friendly design.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      link: "https://aiub-cgpa-calculator.vercel.app/",
+      repoLink: "https://github.com/raiyen-zayed-rakin/AIUB-CGPA-Calculator",
+      preview: "/assets/aiub-cgpa-cal.png",
+    },
+    {
+      title: "AIUB Fitness Zone",
+      label: "Desktop App",
+      difficulty: "B",
+      blurb:
+        "Comprehensive fitness management platform for AIUB students and faculty with workout plans, health resources, and challenges to promote physical well-being.",
+      tech: ["Java", "Swing GUI"],
+      repoLink: "https://github.com/AIUBCodeArchives/AIUB-FITNESS-ZONE",
+      preview: "/assets/aiub-fitness-zone.png",
+    },
+    {
+      title: "StudentDash 2.0",
+      label: "Desktop App",
+      difficulty: "B",
+      blurb:
+        "Ride-sharing application for the student community offering affordable, safe transportation options with real-time tracking and effortless management.",
+      tech: ["C#", "WinForms", "SQL"],
+      repoLink: "https://github.com/AIUBCodeArchives/StudentDash-2.0",
+      preview: "/assets/studentdash20.png",
+    },
+  ];
 
 /* ------------------------------- EXPERIENCE ------------------------------ */
 export const experience: {
@@ -162,28 +154,28 @@ export const experience: {
   rank: Rank;
   points: string[];
 }[] = [
-  {
-    role: "Freelance Web Developer",
-    org: "Remote — Client: Pathfinder 24/7",
-    period: "2026",
-    rank: "A",
-    points: [
-      "Built and deployed a React + Vite + Tailwind + shadcn/ui landing page for a travel & immigration consultancy.",
-      "Configured production deployment on Vercel with custom domain and performance optimization.",
-    ],
-  },
-  {
-    role: "Research Intern",
-    org: "ELITE Research Lab LLC (Remote)",
-    period: "January 2026 – April 2026",
-    rank: "B",
-    points: [
-      "Authored 6 research papers spanning medical imaging, ML-based diagnosis, and AI workflow support.",
-      "Produced literature reviews, experimental design, and manuscript writing for chest X-ray analysis, glaucoma diagnosis, RTI classification, and radiology report generation.",
-      "Prepared publication-ready manuscript drafts across multiple formats.",
-    ],
-  },
-];
+    {
+      role: "Freelance Web Developer",
+      org: "Remote — Client: Pathfinder 24/7",
+      period: "2026",
+      rank: "A",
+      points: [
+        "Built and deployed a React + Vite + Tailwind + shadcn/ui landing page for a travel & immigration consultancy.",
+        "Configured production deployment on Vercel with custom domain and performance optimization.",
+      ],
+    },
+    {
+      role: "Research Intern",
+      org: "ELITE Research Lab LLC (Remote)",
+      period: "January 2026 – April 2026",
+      rank: "B",
+      points: [
+        "Authored 6 research papers spanning medical imaging, ML-based diagnosis, and AI workflow support.",
+        "Produced literature reviews, experimental design, and manuscript writing for chest X-ray analysis, glaucoma diagnosis, RTI classification, and radiology report generation.",
+        "Prepared publication-ready manuscript drafts across multiple formats.",
+      ],
+    },
+  ];
 
 /* -------------------------------- PUBLICATIONS --------------------------- */
 export const publications: {
@@ -193,28 +185,28 @@ export const publications: {
   doi: string | null;
   type: string;
 }[] = [
-  {
-    title: "Towards Safer Cities: AI-Powered Infrastructure Fault Detection Using YOLOv11",
-    journal: "Future Internet",
-    year: 2025,
-    doi: "https://doi.org/10.3390/fi17050187",
-    type: "Article",
-  },
-  {
-    title: "Combination of Bangla and English Sign Language Detection Model Using YOLOv11",
-    journal: "Journal of Imaging",
-    year: 2025,
-    doi: "https://doi.org/10.3390/jimaging11050134",
-    type: "Article",
-  },
-  {
-    title: "Anemia Detection via Eye Conjunctiva Features",
-    journal: "Under Review",
-    year: 2025,
-    doi: null,
-    type: "Co-authored",
-  },
-];
+    {
+      title: "Towards Safer Cities: AI-Powered Infrastructure Fault Detection Using YOLOv11",
+      journal: "Future Internet",
+      year: 2025,
+      doi: "https://doi.org/10.3390/fi17050187",
+      type: "Article",
+    },
+    {
+      title: "Combination of Bangla and English Sign Language Detection Model Using YOLOv11",
+      journal: "Journal of Imaging",
+      year: 2025,
+      doi: "https://doi.org/10.3390/jimaging11050134",
+      type: "Article",
+    },
+    {
+      title: "Anemia Detection via Eye Conjunctiva Features",
+      journal: "Under Review",
+      year: 2025,
+      doi: null,
+      type: "Co-authored",
+    },
+  ];
 
 /* ------------------------------- EDUCATION ------------------------------- */
 export const education: {
@@ -226,38 +218,38 @@ export const education: {
   link: string;
   coursework?: string[];
 }[] = [
-  {
-    institution: "American International University-Bangladesh (AIUB)",
-    degree: "B.Sc. in Computer Science and Engineering",
-    period: "January 2023 – Expected September 2026",
-    cgpa: "3.86 / 4.00",
-    image: "/assets/aiub.png",
-    link: "https://www.aiub.edu",
-    coursework: [
-      "Web Technologies",
-      "Object Oriented Programming",
-      "Machine Learning",
-      "Computer Vision & Pattern Recognition",
-      "Natural Language Processing",
-      "Software Engineering",
-      "Research Methodology",
-    ],
-  },
-  {
-    institution: "Dhaka Imperial College",
-    degree: "Higher Secondary Certificate (HSC)",
-    period: "2019 – 2021",
-    image: "/assets/dhaka_imperiel.png",
-    link: "https://imperialcollege.edu.bd/",
-  },
-  {
-    institution: "Motijheel Model High School",
-    degree: "Secondary School Certificate (SSC)",
-    period: "2017 – 2019",
-    image: "/assets/motijheel.png",
-    link: "http://www.mmodel.edu.bd/",
-  },
-];
+    {
+      institution: "American International University-Bangladesh (AIUB)",
+      degree: "B.Sc. in Computer Science and Engineering",
+      period: "January 2023 – Expected September 2026",
+      cgpa: "3.86 / 4.00",
+      image: "/assets/aiub.png",
+      link: "https://www.aiub.edu",
+      coursework: [
+        "Web Technologies",
+        "Object Oriented Programming",
+        "Machine Learning",
+        "Computer Vision & Pattern Recognition",
+        "Natural Language Processing",
+        "Software Engineering",
+        "Research Methodology",
+      ],
+    },
+    {
+      institution: "Dhaka Imperial College",
+      degree: "Higher Secondary Certificate (HSC)",
+      period: "2019 – 2021",
+      image: "/assets/dhaka_imperiel.png",
+      link: "https://imperialcollege.edu.bd/",
+    },
+    {
+      institution: "Motijheel Model High School",
+      degree: "Secondary School Certificate (SSC)",
+      period: "2017 – 2019",
+      image: "/assets/motijheel.png",
+      link: "http://www.mmodel.edu.bd/",
+    },
+  ];
 
 /* --------------------------------- SOCIAL -------------------------------- */
 export const socials = [

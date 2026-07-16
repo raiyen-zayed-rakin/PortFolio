@@ -17,7 +17,7 @@ export default function About() {
       >
         {/* Left — Bio */}
         <motion.div variants={fadeInLeft} className="flex flex-col gap-6">
-          <div className="flex gap-6 items-start">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-start text-center sm:text-left">
             <img
               src={identity.profileImage}
               alt="Raiyen Zayed Rakin"
@@ -48,9 +48,9 @@ export default function About() {
               { icon: "📧", text: identity.email },
               { icon: "📞", text: identity.phone },
             ].map(({ icon, text }) => (
-              <div key={text} className="flex items-center gap-2 text-[var(--nt-text-muted)]">
+              <div key={text} className="flex items-center gap-2 text-[var(--nt-text-muted)] justify-center sm:justify-start">
                 <span>{icon}</span>
-                <span>{text}</span>
+                <span className="break-all">{text}</span>
               </div>
             ))}
           </div>
@@ -86,17 +86,17 @@ export default function About() {
                 <motion.div
                   key={k}
                   variants={fadeInUp}
-                  className="flex items-center gap-4 p-3 rounded-lg bg-[rgba(var(--glow-sakura),0.05)]
+                  className="flex items-start sm:items-center gap-4 p-3 rounded-lg bg-[rgba(var(--glow-sakura),0.05)]
                     border border-[rgba(var(--glow-sakura),0.1)] hover:border-[rgba(var(--glow-sakura),0.3)]
                     transition-all duration-200 hover:bg-[rgba(var(--glow-sakura),0.08)]"
                 >
-                  <span className="text-xl w-8 flex-shrink-0 text-center">{icon}</span>
-                  <div className="flex flex-1 items-center justify-between gap-4">
-                    <span className="text-xs font-bold tracking-[0.2em] text-[var(--nt-text-muted)] uppercase flex-shrink-0"
+                  <span className="text-xl w-8 flex-shrink-0 text-center mt-0.5 sm:mt-0">{icon}</span>
+                  <div className="flex flex-col sm:flex-row flex-1 sm:items-center justify-between gap-1 sm:gap-4 w-full min-w-0">
+                    <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] text-[var(--nt-text-muted)] uppercase flex-shrink-0"
                       style={{ fontFamily: "var(--font-body)" }}>
                       {k}
                     </span>
-                    <span className="text-sm font-semibold text-[var(--nt-text)] text-right"
+                    <span className="text-xs sm:text-sm font-semibold text-[var(--nt-text)] text-left sm:text-right break-all sm:break-normal"
                       style={{ fontFamily: "var(--font-display)" }}>
                       {v}
                     </span>

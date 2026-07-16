@@ -29,7 +29,7 @@ export default function ProjectCard({
           <img
             src={preview}
             alt={`${title} preview`}
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90"
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-6">

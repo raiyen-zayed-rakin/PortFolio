@@ -17,14 +17,14 @@ export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const timeoutRef = useRef<number | undefined>(undefined);
 
   // Typing animation
   useEffect(() => {
     const currentRole = identity.roles[roleIndex];
     const speed = isDeleting ? 40 : 80;
 
-    timeoutRef.current = setTimeout(() => {
+    timeoutRef.current = window.setTimeout(() => {
       if (!isDeleting && displayText === currentRole) {
         setTimeout(() => setIsDeleting(true), 1800);
         return;
@@ -39,7 +39,11 @@ export default function Hero() {
       );
     }, speed);
 
-    return () => clearTimeout(timeoutRef.current);
+    return () => {
+      if (timeoutRef.current !== undefined) {
+        window.clearTimeout(timeoutRef.current);
+      }
+    };
   }, [displayText, isDeleting, roleIndex]);
 
   const scrollToAbout = () => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });

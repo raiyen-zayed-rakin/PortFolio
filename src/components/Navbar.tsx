@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
@@ -8,16 +8,12 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const lastScrollY = useRef(0);
 
-  // Hide on scroll down, show on scroll up
+  // Handle background opacity/shadow on scroll
   useEffect(() => {
     const handleScroll = () => {
       const current = window.scrollY;
       setScrolled(current > 20);
-      setVisible(current < lastScrollY.current || current < 80);
-      lastScrollY.current = current;
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -49,8 +45,7 @@ export default function Navbar() {
 
   return (
     <motion.header
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: visible ? 0 : -80, opacity: visible ? 1 : 0 }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
@@ -70,12 +65,6 @@ export default function Navbar() {
             alt="Rakin"
             className="w-9 h-9 rounded-full border-2 border-[var(--nt-sakura)] object-cover group-hover:shadow-[0_0_12px_rgba(var(--glow-sakura),0.6)] transition-shadow duration-300"
           />
-          <span
-            className="font-display text-lg font-bold text-[var(--nt-text)] group-hover:text-[var(--nt-sakura)] transition-colors duration-300 hidden sm:block"
-            style={{ letterSpacing: "0.1em" }}
-          >
-            {identity.name}
-          </span>
         </button>
 
         {/* Desktop Nav */}
