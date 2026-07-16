@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionHeading from "../components/SectionHeading";
 import { about, identity } from "../data/content";
-import { staggerContainer, fadeInLeft, fadeInRight, fadeInUp, viewportConfig } from "../lib/animations";
+import { staggerContainer, fadeInLeft, fadeInRight, viewportConfig } from "../lib/animations";
 
 export default function About() {
   return (
