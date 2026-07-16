@@ -15,40 +15,41 @@ export default function About() {
         viewport={viewportConfig}
         className="grid lg:grid-cols-2 gap-12 items-center"
       >
-        {/* Left — Bio */}
-        <motion.div variants={fadeInLeft} className="flex flex-col gap-6">
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-start text-center sm:text-left">
-            <img
-              src={identity.profileImage}
-              alt="Raiyen Zayed Rakin"
-              className="w-20 h-20 rounded-full border-2 border-[var(--nt-sakura)] object-cover flex-shrink-0
-                shadow-[0_0_20px_rgba(var(--glow-sakura),0.4)]"
+        {/* Left — Portrait & Profile Details */}
+        <motion.div variants={fadeInLeft} className="flex flex-col items-center lg:items-start gap-6">
+          <div className="relative group">
+            {/* Glow ring */}
+            <div className="absolute inset-0 rounded-2xl scale-105 pointer-events-none z-0"
+              style={{
+                background: "radial-gradient(circle, rgba(var(--glow-sakura),0.2) 0%, transparent 70%)",
+                filter: "blur(16px)",
+              }}
             />
-            <div>
-              <h3 className="text-2xl font-bold text-[var(--nt-text)]"
-                style={{ fontFamily: "var(--font-display)" }}>
-                {identity.fullName}
-              </h3>
-              <p className="text-[var(--nt-sakura)] font-semibold text-sm mt-1 tracking-wider">
-                {identity.tagline}
-              </p>
-            </div>
+            <img
+              src="assets/profile_image_1.jpg"
+              alt="Raiyen Zayed Rakin"
+              className="relative z-10 w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-2xl border-2 border-[var(--nt-sakura)]
+                shadow-[0_0_20px_rgba(var(--glow-sakura),0.3)] hover:scale-[1.02] transition-transform duration-300"
+            />
+          </div>
+          <div className="text-center lg:text-left">
+            <h3 className="text-2xl font-bold text-[var(--nt-text)]"
+              style={{ fontFamily: "var(--font-display)" }}>
+              {identity.fullName}
+            </h3>
+            <p className="text-[var(--nt-sakura)] font-semibold text-sm mt-1 tracking-wider">
+              {identity.tagline}
+            </p>
           </div>
 
-          {about.paragraphs.map((p, i) => (
-            <p key={i} className="text-[var(--nt-text-muted)] leading-relaxed text-base">
-              {p}
-            </p>
-          ))}
-
           {/* Quick contact info */}
-          <div className="flex flex-col gap-2 text-sm">
+          <div className="flex flex-col gap-2 text-sm w-full">
             {[
               { icon: "📍", text: identity.location },
               { icon: "📧", text: identity.email },
               { icon: "📞", text: identity.phone },
             ].map(({ icon, text }) => (
-              <div key={text} className="flex items-center gap-2 text-[var(--nt-text-muted)] justify-center sm:justify-start">
+              <div key={text} className="flex items-center gap-2 text-[var(--nt-text-muted)] justify-center lg:justify-start">
                 <span>{icon}</span>
                 <span className="break-all">{text}</span>
               </div>
@@ -56,8 +57,16 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* Right — Stat Panel */}
-        <motion.div variants={fadeInRight}>
+        {/* Right — Bio Narrative & Player Status */}
+        <motion.div variants={fadeInRight} className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4">
+            {about.paragraphs.map((p, i) => (
+              <p key={i} className="text-[var(--nt-text-muted)] leading-relaxed text-base">
+                {p}
+              </p>
+            ))}
+          </div>
+
           <div className="system-panel rounded-xl overflow-hidden relative">
             {/* Animated glow overlay — avoids ::after conflict with corner brackets */}
             <div className="absolute inset-0 rounded-xl pointer-events-none z-0"
@@ -83,9 +92,8 @@ export default function About() {
 
             <div className="p-6 flex flex-col gap-3">
               {about.panel.map(({ icon, k, v }) => (
-                <motion.div
+                <div
                   key={k}
-                  variants={fadeInUp}
                   className="flex items-start sm:items-center gap-4 p-3 rounded-lg bg-[rgba(var(--glow-sakura),0.05)]
                     border border-[rgba(var(--glow-sakura),0.1)] hover:border-[rgba(var(--glow-sakura),0.3)]
                     transition-all duration-200 hover:bg-[rgba(var(--glow-sakura),0.08)]"
@@ -101,7 +109,7 @@ export default function About() {
                       {v}
                     </span>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 

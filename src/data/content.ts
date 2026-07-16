@@ -17,7 +17,7 @@ export const identity = {
   email: "raiyenzayedrakin@gmail.com",
   phone: "+8801973389048",
   location: "Dhaka, Bangladesh",
-  cvPath: "/resume.pdf",
+  cvPath: "Raiyen_Zayed_Rakin_Resume.pdf",
   heroImage: "assets/rakin-ghibli-sticker-r2.png",
   profileImage: "assets/profile-image.png",
 };
@@ -33,8 +33,7 @@ export const headlineStats = [
 export const about = {
   title: "ABOUT ME",
   paragraphs: [
-    "I'm a final-year Computer Science and Engineering student at AIUB with a passion for building things that matter — from AI-powered platforms to polished web experiences.",
-    "My work spans full-stack web development, applied machine learning, and academic research. I believe in writing clean, maintainable code that solves real problems.",
+    "I'm a final-year Computer Science and Engineering student at AIUB with a passion for building things that matter — from AI-powered platforms to polished web experiences. My work spans full-stack web development, applied machine learning, and academic research. I believe in writing clean, maintainable code that solves real problems.",
   ],
   panel: [
     { icon: "⚔️", k: "Class", v: "Full-Stack Developer" },
