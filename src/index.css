@@ -1,0 +1,384 @@
+@import "tailwindcss";
+
+/* ============================================================
+   NEO TOKYO THEME — Tailwind v4 tokens
+   Tokens read from CSS variables so they auto-recolor when
+   <html data-theme="light"> is set.
+   ============================================================ */
+@theme {
+  --color-bg:           var(--nt-bg);
+  --color-surface:      var(--nt-surface);
+  --color-surface-alt:  var(--nt-surface-alt);
+  --color-sakura:       var(--nt-sakura);
+  --color-sakura-bright:var(--nt-sakura-bright);
+  --color-electric:     var(--nt-electric);
+  --color-neon:         var(--nt-neon);
+  --color-gold:         var(--nt-gold);
+  --color-text:         var(--nt-text);
+  --color-text-muted:   var(--nt-text-muted);
+  --color-border:       var(--nt-border);
+
+  --font-display: "Cinzel", serif;
+  --font-body:    "Rajdhani", sans-serif;
+
+  --animate-float:      float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulseGlow 2.4s ease-in-out infinite;
+}
+
+/* ============================================================
+   DARK MODE (default)
+   ============================================================ */
+:root,
+[data-theme="dark"] {
+  --nt-bg:            #1a1a2e;
+  --nt-surface:       #16213e;
+  --nt-surface-alt:   #0f3460;
+  --nt-sakura:        #e879a0;
+  --nt-sakura-bright: #f0a0bc;
+  --nt-electric:      #4cc9f0;
+  --nt-neon:          #b14aed;
+  --nt-gold:          #fbbf24;
+  --nt-text:          #e8e6f0;
+  --nt-text-muted:    #9ca3af;
+  --nt-border:        rgba(232, 121, 160, 0.25);
+
+  /* RGB triples for rgba() usage */
+  --glow-sakura:    232, 121, 160;
+  --glow-sakura-b:  240, 160, 188;
+  --glow-electric:  76, 201, 240;
+  --glow-neon:      177, 74, 237;
+  --glow-gold:      251, 191, 36;
+}
+
+/* ============================================================
+   LIGHT MODE
+   ============================================================ */
+[data-theme="light"] {
+  --nt-bg:            #faf8ff;
+  --nt-surface:       #ffffff;
+  --nt-surface-alt:   #f0ecf8;
+  --nt-sakura:        #c2185b;
+  --nt-sakura-bright: #e91e63;
+  --nt-electric:      #0277bd;
+  --nt-neon:          #7b1fa2;
+  --nt-gold:          #f59e0b;
+  --nt-text:          #1a1a2e;
+  --nt-text-muted:    #6b7280;
+  --nt-border:        rgba(194, 24, 91, 0.2);
+
+  --glow-sakura:    194, 24, 91;
+  --glow-sakura-b:  233, 30, 99;
+  --glow-electric:  2, 119, 189;
+  --glow-neon:      123, 31, 162;
+  --glow-gold:      245, 158, 11;
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-16px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
+}
+
+@keyframes shimmerSweep {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+
+@keyframes skillScan {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(350%); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sakuraDrift {
+  0%   { transform: translateY(0) rotate(0deg) translateX(0); opacity: 0; }
+  10%  { opacity: 0.7; }
+  90%  { opacity: 0.4; }
+  100% { transform: translateY(-100vh) rotate(360deg) translateX(60px); opacity: 0; }
+}
+
+@keyframes glitchTop {
+  0%, 100% { transform: translate(-2px, 0); }
+  50%       { transform: translate(2px, -1px); }
+}
+
+@keyframes glitchBottom {
+  0%, 100% { transform: translate(2px, 0); }
+  50%       { transform: translate(-2px, 1px); }
+}
+
+@keyframes borderPulse {
+  0%, 100% { opacity: 0; }
+  50%       { opacity: 1; }
+}
+
+@keyframes typingBlink {
+  0%, 100% { border-color: var(--nt-sakura); }
+  50%       { border-color: transparent; }
+}
+
+/* ============================================================
+   ACCESSIBILITY — kill animations for reduced-motion users
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--nt-bg);
+  color: var(--nt-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Faint grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(var(--glow-sakura), 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--glow-sakura), 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--nt-bg); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--nt-sakura), var(--nt-neon));
+  border-radius: 6px;
+}
+
+a, button, [role="button"] { cursor: pointer; }
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+/* Glowing text */
+.text-glow {
+  text-shadow:
+    0 0 10px rgba(var(--glow-sakura-b), 0.8),
+    0 0 28px rgba(var(--glow-sakura), 0.45);
+}
+
+.text-glow-electric {
+  background: linear-gradient(90deg, var(--nt-electric) 0%, #e8f4fd 50%, var(--nt-sakura-bright) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 4px rgba(var(--glow-electric), 0.6));
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+  color: var(--nt-text);
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.glitch::before {
+  color: var(--nt-electric);
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  animation: glitchTop 2.2s infinite linear alternate;
+}
+.glitch::after {
+  color: var(--nt-sakura);
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  animation: glitchBottom 2.6s infinite linear alternate;
+}
+
+/* Gate card (project cards) */
+.gate-card {
+  background: linear-gradient(160deg, var(--nt-surface-alt), var(--nt-surface));
+  border: 1px solid rgba(var(--glow-sakura), 0.3);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+.gate-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--nt-sakura-bright);
+  box-shadow:
+    0 0 28px rgba(var(--glow-sakura), 0.35),
+    0 8px 32px rgba(0, 0, 0, 0.3);
+}
+.gate-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 60%;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(var(--glow-sakura-b), 0.08) 50%,
+    transparent 70%
+  );
+  animation: shimmerSweep 4s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+
+/* System panel (stat panel in About) */
+.system-panel {
+  position: relative;
+  background: linear-gradient(145deg, rgba(var(--glow-sakura), 0.06), var(--nt-surface));
+  border: 1px solid rgba(var(--glow-sakura-b), 0.6);
+  box-shadow:
+    0 0 0 1px rgba(var(--glow-sakura), 0.2),
+    0 0 28px rgba(var(--glow-sakura), 0.25),
+    inset 0 0 32px rgba(var(--glow-neon), 0.08);
+  backdrop-filter: blur(4px);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.system-panel::before,
+.system-panel::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--nt-sakura);
+}
+.system-panel::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.system-panel::after  { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+/* Border pulse overlay for system-panel */
+.system-panel-pulse::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow:
+    0 0 40px rgba(var(--glow-sakura-b), 0.5),
+    0 0 80px rgba(var(--glow-sakura), 0.3);
+  animation: borderPulse 3s ease-in-out infinite;
+  will-change: opacity;
+}
+
+/* Button variants */
+.btn-sakura {
+  background: linear-gradient(135deg, var(--nt-neon), var(--nt-sakura));
+  box-shadow: 0 0 18px rgba(var(--glow-sakura), 0.45);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  color: #fff;
+}
+.btn-sakura:hover {
+  box-shadow: 0 0 30px rgba(var(--glow-sakura-b), 0.85);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  border: 1px solid rgba(var(--glow-sakura), 0.5);
+  color: var(--nt-sakura);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.btn-ghost:hover {
+  background: rgba(var(--glow-sakura), 0.1);
+  box-shadow: 0 0 18px rgba(var(--glow-sakura), 0.35);
+}
+
+/* Skill scan line */
+.skill-scan {
+  animation: skillScan 2s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Float animation */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Section heading decorative line */
+.section-line {
+  height: 2px;
+  background: linear-gradient(90deg, var(--nt-sakura), var(--nt-electric), transparent);
+}
+
+/* Rank badge colors */
+.rank-S { background: rgba(var(--glow-gold), 0.15); color: var(--nt-gold); border-color: rgba(var(--glow-gold), 0.4); }
+.rank-A { background: rgba(var(--glow-sakura), 0.15); color: var(--nt-sakura); border-color: rgba(var(--glow-sakura), 0.4); }
+.rank-B { background: rgba(var(--glow-electric), 0.15); color: var(--nt-electric); border-color: rgba(var(--glow-electric), 0.4); }
+.rank-C { background: rgba(var(--glow-neon), 0.15); color: var(--nt-neon); border-color: rgba(var(--glow-neon), 0.4); }
+.rank-D, .rank-E { background: rgba(156, 163, 175, 0.15); color: #9ca3af; border-color: rgba(156, 163, 175, 0.3); }
+
+/* Timeline dot pulse */
+.timeline-dot {
+  box-shadow: 0 0 0 0 rgba(var(--glow-sakura), 0.4);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Wave divider (Ghibli-inspired) used above footer */
+.wave-divider {
+  overflow: hidden;
+  line-height: 0;
+}
+.wave-divider svg {
+  display: block;
+  width: 100%;
+}
+
+/* Glassmorphism input */
+.glass-input {
+  background: rgba(var(--glow-sakura), 0.04);
+  border: 1px solid rgba(var(--glow-sakura), 0.25);
+  color: var(--nt-text);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  outline: none;
+}
+.glass-input:focus {
+  border-color: var(--nt-sakura);
+  box-shadow: 0 0 12px rgba(var(--glow-sakura), 0.25);
+}
+.glass-input::placeholder {
+  color: var(--nt-text-muted);
+}
+
+/* Scrollbar hidden utility */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
