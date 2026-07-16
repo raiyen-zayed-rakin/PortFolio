@@ -1,10 +1,13 @@
 {
+  "homepage": "https://raiyenzayedrakin.github.io/PortFolio/",
   "name": "vite-temp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
