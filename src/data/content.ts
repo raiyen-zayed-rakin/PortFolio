@@ -18,8 +18,8 @@ export const identity = {
   phone: "+8801973389048",
   location: "Dhaka, Bangladesh",
   cvPath: "/resume.pdf",
-  heroImage: "/assets/rakin-ghibli-sticker-r2.png",
-  profileImage: "/assets/profile-image.png",
+  heroImage: "assets/rakin-ghibli-sticker-r2.png",
+  profileImage: "assets/profile-image.png",
 };
 
 /* --------------------------- HEADLINE STATS ------------------------------ */
@@ -90,7 +90,7 @@ export const projects: {
       tech: ["React", "Vite", "Tailwind CSS", "shadcn/ui", "FastAPI", "Gemini API", "SentenceTransformers"],
       link: "https://recruit-bd-ai.vercel.app/",
       repoLink: "https://github.com/raiyen-zayed-rakin/RecruitBD-AI",
-      preview: "/assets/recruitbd.png",
+      preview: "assets/recruitbd.png",
     },
     {
       title: "Ledger-AI",
@@ -101,7 +101,7 @@ export const projects: {
       tech: ["React 18", "TypeScript", "Tailwind CSS", "Next.js", "Groq LLaMA", "Supabase Auth"],
       link: "https://ledgerai.mrudoy.me/",
       repoLink: "https://github.com/raiyen-zayed-rakin/Ledger-Ai",
-      preview: "/assets/ledger.png",
+      preview: "assets/ledger.png",
     },
     {
       title: "Pathfinder 24/7",
@@ -111,7 +111,7 @@ export const projects: {
         "Premium landing page for a Bangladesh-based travel and immigration consultancy. Showcasing visa processing, work permits, student visas, and immigration consulting services.",
       tech: ["React", "Vite", "Tailwind CSS", "shadcn/ui"],
       link: "https://pathfinder24seven.vercel.app/",
-      preview: "/assets/pathfinder.png",
+      preview: "assets/pathfinder.png",
     },
     {
       title: "AIUB CGPA Calculator",
@@ -122,7 +122,7 @@ export const projects: {
       tech: ["HTML", "CSS", "JavaScript"],
       link: "https://aiub-cgpa-calculator.vercel.app/",
       repoLink: "https://github.com/raiyen-zayed-rakin/AIUB-CGPA-Calculator",
-      preview: "/assets/aiub-cgpa-cal.png",
+      preview: "assets/aiub-cgpa-cal.png",
     },
     {
       title: "AIUB Fitness Zone",
@@ -132,7 +132,7 @@ export const projects: {
         "Comprehensive fitness management platform for AIUB students and faculty with workout plans, health resources, and challenges to promote physical well-being.",
       tech: ["Java", "Swing GUI"],
       repoLink: "https://github.com/AIUBCodeArchives/AIUB-FITNESS-ZONE",
-      preview: "/assets/aiub-fitness-zone.png",
+      preview: "assets/aiub-fitness-zone.png",
     },
     {
       title: "StudentDash 2.0",
@@ -142,7 +142,7 @@ export const projects: {
         "Ride-sharing application for the student community offering affordable, safe transportation options with real-time tracking and effortless management.",
       tech: ["C#", "WinForms", "SQL"],
       repoLink: "https://github.com/AIUBCodeArchives/StudentDash-2.0",
-      preview: "/assets/studentdash20.png",
+      preview: "assets/studentdash20.png",
     },
   ];
 
@@ -223,7 +223,7 @@ export const education: {
       degree: "B.Sc. in Computer Science and Engineering",
       period: "January 2023 – Expected September 2026",
       cgpa: "3.86 / 4.00",
-      image: "/assets/aiub.png",
+      image: "assets/aiub.png",
       link: "https://www.aiub.edu",
       coursework: [
         "Web Technologies",
@@ -239,14 +239,14 @@ export const education: {
       institution: "Dhaka Imperial College",
       degree: "Higher Secondary Certificate (HSC)",
       period: "2019 – 2021",
-      image: "/assets/dhaka_imperiel.png",
+      image: "assets/dhaka_imperiel.png",
       link: "https://imperialcollege.edu.bd/",
     },
     {
       institution: "Motijheel Model High School",
       degree: "Secondary School Certificate (SSC)",
       period: "2017 – 2019",
-      image: "/assets/motijheel.png",
+      image: "assets/motijheel.png",
       link: "http://www.mmodel.edu.bd/",
     },
   ];
