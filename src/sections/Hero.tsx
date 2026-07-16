@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Download, ChevronDown } from "lucide-react";
 import { identity, headlineStats, socials } from "../data/content";
 import { GithubIcon, LinkedinIcon, InstagramIcon, ResearchGateIcon, EmailIcon } from "../components/BrandIcons";
-import { staggerContainer, fadeInUp, fadeInRight, viewportConfig } from "../lib/animations";
+import { staggerContainer, fadeInUp, fadeInRight } from "../lib/animations";
 
 const SOCIAL_ICONS: Record<string, React.FC<{ size?: number; className?: string }>> = {
   GitHub: GithubIcon,

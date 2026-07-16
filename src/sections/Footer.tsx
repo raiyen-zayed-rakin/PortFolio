@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
-import { identity, socials } from "../data/content";
+import { socials } from "../data/content";
 import { GithubIcon, LinkedinIcon, InstagramIcon, ResearchGateIcon, EmailIcon } from "../components/BrandIcons";
 
 const SOCIAL_ICONS: Record<string, React.FC<{ size?: number; className?: string }>> = {
